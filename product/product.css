@@ -1,0 +1,699 @@
+
+
+.cat-preview {
+    display: flex;
+    flex-wrap:row wrap;
+    width: 100%;
+    background:linear-gradient(var(--background), #111);
+}
+.cat-title-top{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  color: #bdbdbd;
+  margin: 2% 0 3% 0;
+}
+.cat-title{
+  width: 100%;
+  display: flex;
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.cat-text:hover{
+    color: rgb(255, 165, 105);
+}
+.cat-container{
+    display: flex;
+    max-width: 100%;
+    gap: 10px;
+}
+.cat-text{
+    display: inline-block;
+    transform: rotate(-90deg);
+    transform-origin: left top;
+    white-space: nowrap;
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: #bebebe;
+    width: 5%;
+    margin:0 0 0 13px;
+    align-self: flex-end;
+    transition: 0.5s ease-in-out;
+    /* position: absolute; */
+}
+.cat-img img{
+    width: 100%;
+    height: auto;
+    filter: brightness(80%);
+}
+.cat-img{
+  transition: 1s ease-in-out;
+}
+
+.shoe-container .shoe-card {
+    position: relative;
+    width: 100%;
+    height: 450px;
+    background: #232323;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0px 0px 30px 1px rgba(48, 48, 48, 0.719);
+}
+
+.shoe-container .shoe-card:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--primary);
+    clip-path: circle(150px at 80% 20%);
+    transition: 0.5s ease-in-out;
+}
+
+.shoe-container .shoe-card:hover:before {
+    clip-path: circle(300px at 80% -20%);
+}
+
+.shoe-container .shoe-card:after {
+    content: "Nike";
+    position: absolute;
+    top: 30%;
+    left: -20%;
+    font-size: 12em;
+    font-weight: 800;
+    font-style: italic;
+    color: rgba(255, 255, 255, 0.04);
+
+}
+
+.shoe-container .shoe-card .imgBx {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1000;
+    width: 100%;
+    height: 100%;
+    transition: .5s;
+}
+
+.shoe-container .shoe-card:hover .imgBx {
+    top: 0%;
+    transform: translateY(-25%);
+    /* bug  */
+}
+
+.shoe-container .shoe-card .imgBx img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(0);
+    width: 270px;
+}
+
+.shoe-container .shoe-card .contentBx {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    text-align: center;
+    transition: 1s;
+    z-index: 90;
+}
+
+.shoe-container .shoe-card:hover .contentBx {
+    height: 210px;
+}
+
+.shoe-container .shoe-card .contentBx h2 {
+    position: relative;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #fff;
+}
+
+.shoe-container .shoe-card .contentBx .size,
+.shoe-container .shoe-card .contentBx .color {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 20px;
+    transition: .5s;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.shoe-container .shoe-card:hover .contentBx .size {
+    opacity: 1;
+    visibility: visible;
+    transition-delay: .5s;
+}
+
+.shoe-container .shoe-card:hover .contentBx .color {
+    opacity: 1;
+    visibility: visible;
+    transition-delay: .6s;
+}
+
+.shoe-container .shoe-card .contentBx .size h3,
+.shoe-container .shoe-card .contentBx .color h3 {
+    color: white;
+    font-weight: 300;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-right: 10px;
+}
+
+.shoe-container .shoe-card .contentBx .size span {
+    width: 26px;
+    height: 26px;
+    text-align: center;
+    line-height: 26px;
+    font-size: 14px;
+    display: inline-block;
+    color: #111;
+    background: #fff;
+    margin: 0 5px;
+    transition: .5s;
+    color: #111;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.shoe-container .shoe-card .contentBx .size span:hover {  /* other bug */
+    background: #B90000;
+}
+
+.shoe-container .shoe-card .contentBx .color span {
+    width: 20px;
+    height: 20px;
+    background: #ff0;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.shoe-container .shoe-card .contentBx .color span:nth-child(2) {
+     background: #1BBFE9;
+}
+
+.shoe-container .shoe-card .contentBx .color span:nth-child(3) {
+     background: #1B2FE9;
+}
+
+.shoe-container .shoe-card .contentBx .color span:nth-child(4) {
+     background: #080481;
+}
+
+.shoe-container .shoe-card .contentBx a {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #fff;
+    border-radius: 4px;
+    margin-top: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    color: #111;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: .5s;
+}
+
+.shoe-container .shoe-card:hover .contentBx a {
+    opacity: 1;
+    transform: translateY(0px);
+    transition-delay: .7s;
+} 
+
+
+
+
+
+
+
+
+
+
+.snkr-container {
+    position: relative;
+    display: flex;
+    /* flex-direction: row-reverse; */
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 90%;
+    height: 600px;
+    background-color: #111;
+    padding: 7% 5% 3% 5%;
+}
+
+.snkr-container .snkr-imgBx {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+    background: #212121;
+    transition: .3s linear;
+    border-radius: 50%;
+    animation: bounce2 2s infinite;
+    filter:drop-shadow(1px 7px 5px var(--testimonials));
+}
+
+.snkr-container .snkr-imgBx:before {
+    content: 'Nike';
+    position: absolute;
+    top: 0px;
+    left: 24px;
+    color: #000;
+    opacity: 0.5;
+    font-size: 8em;
+    font-weight: 800;
+}
+
+.snkr-container .snkr-imgBx img {
+    position: relative;
+    width: 700px;
+    transform: rotate(-30deg);
+    left: -50px;
+    transition: .9s linear;
+}
+
+.snkr-container .snkr-details {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 40px;
+}
+
+.snkr-container .snkr-details h2{
+    margin: 0;
+    padding: 0;
+    font-size: 2.4em;
+    line-height: 1em;
+}
+
+.snkr-container .snkr-details h2 span {
+    font-size: 0.4em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #999;
+}
+
+.snkr-container .snkr-details p {
+    max-width: 85%;
+    margin-left: 15%;
+    color: rgb(189, 189, 189);
+    font-size: 15px;
+    margin-bottom: 36px;
+}
+
+.snkr-container .snkr-details h3 {
+    margin: 0;
+    padding: 0;
+    font-size: 2.5em;
+    color: #a2a2a2;
+    float: left;
+    background-color:var(--testimonials);
+}
+.snkr-container .snkr-details button {
+    background: #000;
+    color: #fff;
+    border: none;
+    outline: none;
+    padding: 15px 20px;
+    margin-top: 5px;
+    font-size: 16px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: 600;
+    border-radius: 40px;
+    float: right;
+}
+
+.product-colors span {
+    width: 26px;
+    height: 26px;
+    top: 7px;
+    margin-right: 12px;
+    left: 10px;
+    border-radius: 50%;
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.black {
+    background: #000;
+}
+
+.red {
+    background: #D5212E;
+}
+
+.orange {
+    background: #F18557;
+}
+
+.product-colors .active:after{
+    content: "";
+    width: 36px;
+    height: 36px;
+    border: 2px solid #fff;
+    position: absolute;
+    border-radius: 50%;
+    box-sizing: border-box;
+    left: -5px;
+    top: -5px;
+}
+
+/* responsive */
+
+
+  /* #header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+#logo {
+  text-decoration: none;
+  color: white;
+  font-size: 5vh;
+  font-weight: bold;
+}
+	
+#menu-icon {
+  font-family: Geneva, sans-serif;
+  font-size: 6vh;
+}
+
+
+.final {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 100vh;
+	padding: 1em;
+	box-sizing: border-box;
+	color: white;
+	background: url(https://images.pexels.com/photos/6050922/pexels-photo-6050922.jpeg?auto=compress&cs=tinysrgb&w=600) center center no-repeat;
+	background-size: cover;
+}
+
+.final-title {
+	max-width: 16em;
+	margin: 0;
+	font-size: 12vh;
+	font-weight: bold;
+	line-height: .9;
+}
+	
+	@media only screen and (min-width: 32em) { .hero-title { font-size: 16vh; } }	
+
+.final-footer {
+	display: flex;
+	margin-bottom: 1em;
+}
+
+.final-button {
+	padding: .5em .67em;
+	color: white;
+	text-decoration: none;
+	border: .1em solid white;
+
+}
+	
+	.final-primary {
+		color: black;
+		background-color: white;
+	} */
+
+    .d-flex {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+      }
+      
+      .align-center {
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+      }
+      
+      .flex-centerY-centerX {
+        justify-content: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+      }
+      
+      .page-wrapper {
+        height: 100%;
+        display: table;
+      }
+      
+      .page-wrapper .page-inner {
+        display: table-cell;
+        vertical-align: middle;
+   
+      }
+      
+      .el-wrapper {
+        width: 360px;
+        padding: 15px;
+        margin: 15px auto;
+        background-color: var(--testimonials);
+      }
+      
+      
+      
+      .el-wrapper:hover .h-bg {
+        left: 0px;
+      }
+      
+      .el-wrapper:hover .price {
+        left: 20px;
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        -o-transform: translateY(-50%);
+        transform: translateY(-50%);
+        color: #818181;
+      }
+      
+      .el-wrapper:hover .add-to-cart {
+        left: 50%;
+      }
+      
+      .el-wrapper:hover .img {
+        webkit-filter: blur(7px);
+        -o-filter: blur(7px);
+        -ms-filter: blur(7px);
+        filter: blur(7px);
+        filter: progid:DXImageTransform.Microsoft.Blur(pixelradius='7', shadowopacity='0.0');
+        opacity: 0.4;
+      }
+      
+      .el-wrapper:hover .info-inner {
+        bottom: 155px;
+      }
+      
+      .el-wrapper:hover .a-size {
+        -webkit-transition-delay: 300ms;
+        -o-transition-delay: 300ms;
+        transition-delay: 300ms;
+        bottom: 50px;
+        opacity: 1;
+      }
+      
+      .el-wrapper .box-down {
+        width: 100%;
+        height: 60px;
+        position: relative;
+        overflow: hidden;
+      }
+      
+      .el-wrapper .box-up {
+        width: 100%;
+        height: 300px;
+        position: relative;
+        overflow: hidden;
+        text-align: center;
+      }
+      
+      .el-wrapper .img {
+
+        padding: 0px 20px 60px;
+        -webkit-transition: all 800ms cubic-bezier(0, 0, 0.18, 1);
+        -moz-transition: all 800ms cubic-bezier(0, 0, 0.18, 1);
+        -o-transition: all 800ms cubic-bezier(0, 0, 0.18, 1);
+        transition: all 800ms cubic-bezier(0, 0, 0.18, 1);
+        /* ease-out */
+        -webkit-transition-timing-function: cubic-bezier(0, 0, 0.18, 1);
+        -moz-transition-timing-function: cubic-bezier(0, 0, 0.18, 1);
+        -o-transition-timing-function: cubic-bezier(0, 0, 0.18, 1);
+        transition-timing-function: cubic-bezier(0, 0, 0.18, 1);
+        /* ease-out */
+      }
+      
+      .h-bg {
+        -webkit-transition: all 800ms cubic-bezier(0, 0, 0.18, 1);
+        -moz-transition: all 800ms cubic-bezier(0, 0, 0.18, 1);
+        -o-transition: all 800ms cubic-bezier(0, 0, 0.18, 1);
+        transition: all 800ms cubic-bezier(0, 0, 0.18, 1);
+        /* ease-out */
+        -webkit-transition-timing-function: cubic-bezier(0, 0, 0.18, 1);
+        -moz-transition-timing-function: cubic-bezier(0, 0, 0.18, 1);
+        -o-transition-timing-function: cubic-bezier(0, 0, 0.18, 1);
+        transition-timing-function: cubic-bezier(0, 0, 0.18, 1);
+        /* ease-out */
+        width: 660px;
+        height: 100%;
+        background-color: #3f96cd;
+        position: absolute;
+        left: -659px;
+      }
+      
+      .h-bg .h-bg-inner {
+        width: 50%;
+        height: 100%;
+        background-color: #464646;
+      }
+      
+      .info-inner {
+        -webkit-transition: all 400ms cubic-bezier(0, 0, 0.18, 1);
+        -moz-transition: all 400ms cubic-bezier(0, 0, 0.18, 1);
+        -o-transition: all 400ms cubic-bezier(0, 0, 0.18, 1);
+        transition: all 400ms cubic-bezier(0, 0, 0.18, 1);
+        /* ease-out */
+        -webkit-transition-timing-function: cubic-bezier(0, 0, 0.18, 1);
+        -moz-transition-timing-function: cubic-bezier(0, 0, 0.18, 1);
+        -o-transition-timing-function: cubic-bezier(0, 0, 0.18, 1);
+        transition-timing-function: cubic-bezier(0, 0, 0.18, 1);
+        /* ease-out */
+        position: absolute;
+        width: 100%;
+        bottom: 25px;
+      }
+      
+      .info-inner .p-name,
+      .info-inner .p-company {
+        display: block;
+      }
+      
+      .info-inner .p-name {
+        font-family: 'PT Sans', sans-serif;
+        font-size: 18px;
+        color: #252525;
+      }
+      
+      .info-inner .p-company {
+        font-family: 'Lato', sans-serif;
+        font-size: 12px;
+        text-transform: uppercase;
+        color: #8c8c8c;
+      }
+      
+      .a-size {
+        -webkit-transition: all 300ms cubic-bezier(0, 0, 0.18, 1);
+        -moz-transition: all 300ms cubic-bezier(0, 0, 0.18, 1);
+        -o-transition: all 300ms cubic-bezier(0, 0, 0.18, 1);
+        transition: all 300ms cubic-bezier(0, 0, 0.18, 1);
+        /* ease-out */
+        -webkit-transition-timing-function: cubic-bezier(0, 0, 0.18, 1);
+        -moz-transition-timing-function: cubic-bezier(0, 0, 0.18, 1);
+        -o-transition-timing-function: cubic-bezier(0, 0, 0.18, 1);
+        transition-timing-function: cubic-bezier(0, 0, 0.18, 1);
+        /* ease-out */
+        position: absolute;
+        width: 100%;
+        bottom: -20px;
+        font-family: 'PT Sans', sans-serif;
+        color: #828282;
+        opacity: 0;
+      }
+      
+      .a-size .size {
+        color: #252525;
+      }
+      
+      .my-cart {
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        font-family: 'Lato', sans-serif;
+        font-weight: 700;
+      }
+      
+      .my-cart .price {
+        -webkit-transition: all 600ms cubic-bezier(0, 0, 0.18, 1);
+        -moz-transition: all 600ms cubic-bezier(0, 0, 0.18, 1);
+        -o-transition: all 600ms cubic-bezier(0, 0, 0.18, 1);
+        transition: all 600ms cubic-bezier(0, 0, 0.18, 1);
+        /* ease-out */
+        -webkit-transition-timing-function: cubic-bezier(0, 0, 0.18, 1);
+        -moz-transition-timing-function: cubic-bezier(0, 0, 0.18, 1);
+        -o-transition-timing-function: cubic-bezier(0, 0, 0.18, 1);
+        transition-timing-function: cubic-bezier(0, 0, 0.18, 1);
+        /* ease-out */
+        -webkit-transition-delay: 100ms;
+        -o-transition-delay: 100ms;
+        transition-delay: 100ms;
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        -o-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        font-size: 16px;
+        color: #252525;
+      }
+      
+      .cart .add-to-cart {
+        -webkit-transition: all 600ms cubic-bezier(0, 0, 0.18, 1);
+        -moz-transition: all 600ms cubic-bezier(0, 0, 0.18, 1);
+        -o-transition: all 600ms cubic-bezier(0, 0, 0.18, 1);
+        transition: all 600ms cubic-bezier(0, 0, 0.18, 1);
+        /* ease-out */
+        -webkit-transition-timing-function: cubic-bezier(0, 0, 0.18, 1);
+        -moz-transition-timing-function: cubic-bezier(0, 0, 0.18, 1);
+        -o-transition-timing-function: cubic-bezier(0, 0, 0.18, 1);
+        transition-timing-function: cubic-bezier(0, 0, 0.18, 1);
+        /* ease-out */
+        -webkit-transition-delay: 100ms;
+        -o-transition-delay: 100ms;
+        transition-delay: 100ms;
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 110%;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        -o-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+      }
+      
+      .my-cart .add-to-cart .txt {
+        font-size: 12px;
+        color: #fff !important;
+        letter-spacing: 0.045em;
+        text-transform: uppercase;
+        white-space: nowrap;
+      }

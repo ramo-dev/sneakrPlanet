@@ -1,0 +1,70 @@
+/* @import "https://unpkg.com/open-props"; */
+/* @import "https://unpkg.com/open-props/normalize.min.css"; */
+
+.scrollport {
+  -webkit-mask-image: linear-gradient(to right, var(--testimonials), #000, #000, var(--testimonials)); 
+  overflow-x: auto;
+  overscroll-behavior-x: contain;  
+  display: flex;
+  gap:4%;
+  align-items: start;
+  padding:10% 5% 10% 5%;
+  background:url(/images/wave-haikei.png) no-repeat center;
+  background-size: cover;
+}
+
+.scrollport::-webkit-scrollbar {
+    width: 3px;
+}
+.scrollport::-webkit-scrollbar-track {
+    background: var(--testimonials);
+}
+.scrollport::-webkit-scrollbar-thumb {
+    background-color: var(--primary);
+}
+
+.scrollport > div {
+  height:350px;
+  width: 850px;
+  aspect-ratio:1;
+  border-radius: 8px;
+  transition: 0.3s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.scrollport > div:hover{
+    transform: scale(1.1);
+}
+
+.scrollport .slider-control{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width:100%;
+}
+.slider-control .left, .right{
+    position: absolute;
+    background-color: #fff;
+    height: 60px;
+    width: 60px;
+    z-index: 9999;
+    margin-top: 20%;
+    border-radius: 50%;
+    transition: 0.2s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 60px;
+    font-weight: 800;
+    padding:0% 0% 1.3% 0%;
+    border:1px solid  var(--primary);
+    
+}
+.slider-control .left:hover, .right:hover{
+    transform: scale(1.4);
+}
+.slider-control .right{  
+    right:5%;
+}
